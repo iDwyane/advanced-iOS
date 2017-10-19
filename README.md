@@ -5,3 +5,5 @@ The following links introduce these demo.
 本文详解在简书上http://www.jianshu.com/p/952d79d4ed03
 # 03Dynamic Toss
 本文详解在简书上http://www.jianshu.com/p/fc8d86bf8818
+# 04Paticel Emitters
+本文详解在简书上http://www.jianshu.com/p/101964606541
