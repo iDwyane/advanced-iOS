@@ -64,7 +64,7 @@
     
     //变量初始化
     self.animatedNumber = @(0);
-    double beginNumber = 0;
+    double beginNumber = 1;
     double endNumber = [number doubleValue];
     
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithCapacity:0];
@@ -83,7 +83,7 @@
 - (void)changeAnimation:(NSTimer *)timer{
 
     NSMutableDictionary *info = timer.userInfo;
-    double begin = (int)[info objectForKey:kBeginNumberKey];
+    double begin = ((NSNumber *)[info objectForKey:kBeginNumberKey]).doubleValue;
     double end = ((NSNumber *)[info objectForKey:kEndNumberKey]).doubleValue;
     double range = ((NSNumber *)[info objectForKey:kRangeNumberKey]).doubleValue;
     
@@ -97,6 +97,7 @@
     if (value == 0) {
         self.valueString = [NSString stringWithFormat:@"%f", begin];
         self.text = [NSString stringWithFormat:@"%.@",[formatter stringFromNumber:@(begin)]];
+
     } else if (value >= end) {
         self.text = [NSString stringWithFormat:@"%.@",[formatter stringFromNumber:@(end)]];
         self.valueString = [NSString stringWithFormat:@"%f", begin];
